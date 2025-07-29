@@ -167,6 +167,10 @@ collections:
     output: true
     sort_by: order
 
+# 포스트 내 이미지 파일을 정적 파일로 처리
+include:
+  - _posts
+
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project
@@ -188,6 +192,31 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      permalink: /posts/:title/
+  - scope:
+      path: "_posts/**/*.png"
+    values:
+      sitemap: false
+  - scope:
+      path: "_posts/**/*.jpg"
+    values:
+      sitemap: false
+  - scope:
+      path: "_posts/**/*.jpeg"
+    values:
+      sitemap: false
+  - scope:
+      path: "_posts/**/*.gif"
+    values:
+      sitemap: false
+  - scope:
+      path: "_posts/**/*.webp"
+    values:
+      sitemap: false
 
 sass:
   style: compressed
@@ -211,6 +240,10 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
+
+# 포스트 내 이미지 파일을 정적 파일로 처리
+keep_files:
+  - posts
 
 jekyll-archives:
   enabled: [categories, tags]

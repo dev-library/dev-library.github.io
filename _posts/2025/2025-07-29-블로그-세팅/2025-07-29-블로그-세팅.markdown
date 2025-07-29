@@ -1,6 +1,6 @@
 ---
 title: 켠 김에 첫 포스팅까지 하는 블로그 배포
-date: 2025-07-29 19:00:00
+date: 2025-07-29 19:00:00 +0900
 categories: [낙서]
 tags: [github]     # TAG names should always be lowercase
 media_subpath: /_posts/2025/2025-07-29-블로그-세팅/
